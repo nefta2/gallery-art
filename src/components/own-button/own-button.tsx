@@ -6,7 +6,7 @@ export interface OwnButtonProps {
 	title: String;
 	colorChosen: String;
 	backgroundColorChosen: String;
-	link: String;
+	link: any;
 	borderChosen?: String;
 }
 
