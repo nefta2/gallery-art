@@ -1,0 +1,54 @@
+$light-color-background: #f2f2f2;
+$dark-color-fonts: #1b1b1b;
+.root {
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	//background-image: url('../../assets/flamingos-painting/flamingos-front-view.jpeg');
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	position: relative;
+	background-color: $light-color-background;
+	color: $dark-color-fonts !important;
+	align-items: center;
+	gap: 70px;
+	padding-top: 40px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.button {
+	background: $dark-color-fonts;
+	color: $light-color-background;
+	border-radius: 5px;
+	padding: 8px;
+}
+
+.inputs {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+.input {
+	border: 1px solid #92929269;
+	border-radius: 2px;
+}
+.topInputs {
+	display: flex;
+	gap: 50px;
+}
+
+.mainTitle {
+	font-size: 60px;
+	font-family: 'Forum', serif;
+	white-space: 'nowrap';
+}
+
+.error {
+	color: rgb(182, 0, 0);
+}

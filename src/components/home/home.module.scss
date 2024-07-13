@@ -1,0 +1,61 @@
+.root {
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	//background-image: url('../../assets/flamingos-painting/flamingos-front-view.jpeg');
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	position: relative;
+}
+
+.root::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(
+		0,
+		0,
+		0,
+		0.599
+	); /* Adjust the color and opacity as needed */
+	z-index: 0; /* Ensure the overlay is behind the content */
+}
+.mainTitle {
+	font-size: 80px;
+	font-family: 'Forum', serif;
+}
+
+.secondTitle {
+	font-size: 26px;
+	font-family: 'Forum', serif;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	align-items: center;
+}
+
+.leftDiv {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: absolute;
+	left: 0;
+	height: 100%;
+}
+.centerDiv {
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+	justify-content: center;
+	position: relative;
+}
+
+.secondDiv {
+	display: flex;
+	flex-direction: column;
+	gap: 54px;
+}

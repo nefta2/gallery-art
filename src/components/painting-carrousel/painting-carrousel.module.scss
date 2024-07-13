@@ -1,0 +1,22 @@
+$light-color: #f2f2f2;
+
+.mainDiv {
+	display: flex;
+	flex-direction: column;
+	gap: 52px;
+	font-size: 20px;
+}
+.singleDiv {
+	/* background-color: $light-color;
+	color: $dark-color-fonts; */
+	padding: 10px;
+	display: flex;
+	justify-content: flex-end;
+	width: 180px;
+	padding-right: 20px;
+	cursor: pointer;
+}
+
+.singleDiv:hover {
+	background-color: $light-color;
+}

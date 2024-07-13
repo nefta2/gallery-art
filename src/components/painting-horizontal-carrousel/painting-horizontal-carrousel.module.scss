@@ -1,0 +1,17 @@
+.mainContainer {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+
+.image {
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 600px;
+	height: 545px;
+}
+
+.arrow {
+	cursor: pointer;
+}

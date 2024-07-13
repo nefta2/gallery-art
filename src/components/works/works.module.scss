@@ -1,0 +1,65 @@
+$light-color-background: #f2f2f2;
+$dark-color-fonts: #1b1b1b;
+
+.root {
+	max-width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	position: relative;
+	background-color: $light-color-background;
+	color: $dark-color-fonts !important;
+	align-items: center;
+	gap: 30px;
+	padding-top: 75px;
+	flex-direction: column;
+}
+
+.pictures {
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%;
+}
+
+.mainTitle {
+	font-size: 60px;
+	font-family: 'Forum', serif;
+	white-space: nowrap;
+}
+
+.leftDiv {
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+	justify-content: center;
+	position: relative;
+	align-items: center;
+	width: 50%;
+}
+
+.paintContainer {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 100%;
+}
+
+.paintItem {
+	width: 25%;
+	padding: 25px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.paintTitle {
+	text-align: center;
+	margin-top: 10px;
+	font-size: 20px;
+}

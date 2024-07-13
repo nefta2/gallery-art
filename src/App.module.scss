@@ -1,0 +1,12 @@
+@tailwind base; /* Preflight will be injected here */
+@tailwind components;
+@tailwind utilities;
+:root {
+	--table: #262a34;
+}
+
+.main-page-wrapper {
+	flex-grow: 1;
+	overflow-y: auto;
+	scrollbar-width: thin;
+}

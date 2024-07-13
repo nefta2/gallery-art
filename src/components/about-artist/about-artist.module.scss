@@ -1,0 +1,89 @@
+$light-color-background: #f2f2f2;
+$dark-color-fonts: #1b1b1b;
+.root {
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	//background-image: url('../../assets/flamingos-painting/flamingos-front-view.jpeg');
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	position: relative;
+	background-color: $light-color-background;
+	color: $dark-color-fonts !important;
+	align-items: center;
+	gap: 70px;
+	padding-top: 40px;
+}
+.root2 {
+	max-width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	position: relative;
+	background-color: #f2f2f2;
+	color: #1b1b1b !important;
+	align-items: center;
+	gap: 35px;
+	flex-direction: column;
+}
+
+.pictures {
+	display: flex;
+	gap: 27px;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+}
+
+.landingDiv {
+}
+
+.mainTitle {
+	font-size: 60px;
+	font-family: 'Forum', serif;
+	white-space: 'nowrap';
+}
+
+.artistDescription {
+	font-size: 18px;
+	font-family: 'Forum', serif;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	align-items: center;
+	text-align: center;
+}
+
+.leftDiv {
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+	justify-content: center;
+	position: relative;
+	align-items: center;
+	width: 50%;
+}
+
+.artistDiv {
+	background-image: url('../../assets/about-artist/artist.jpg');
+	background-size: cover;
+	background-position: center;
+	width: 560px;
+	height: 545px;
+}
+
+.workAuraDiv {
+	background-size: cover;
+	background-position: center;
+	width: 383px;
+	height: 455px;
+}
+
+.secondDiv {
+	display: flex;
+	flex-direction: column;
+	gap: 54px;
+}

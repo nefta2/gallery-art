@@ -1,0 +1,72 @@
+$light-color-background: #f2f2f2;
+$dark-color-fonts: #1b1b1b;
+.root {
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	//background-image: url('../../assets/flamingos-painting/flamingos-front-view.jpeg');
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	position: relative;
+	background-color: $light-color-background;
+	color: $dark-color-fonts !important;
+	align-items: center;
+	gap: 70px;
+	padding-top: 40px;
+}
+
+.pictures {
+	display: flex;
+	gap: 27px;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+}
+
+.mainTitle {
+	font-size: 60px;
+	font-family: 'Forum', serif;
+	white-space: 'nowrap';
+}
+
+.paintDetails {
+	font-size: 18px;
+	font-family: 'Forum', serif;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	align-items: flex-start;
+	text-align: left;
+}
+
+.leftDiv {
+	width: 100%;
+	height: 100%;
+}
+
+.rightDiv {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	justify-content: center;
+	position: relative;
+	align-items: flex-start;
+	width: 50%;
+}
+
+.artistDiv {
+	background-image: url('../../assets/about-artist/artist.jpg');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%;
+}
+
+.secondDiv {
+	display: flex;
+	flex-direction: column;
+	gap: 54px;
+}

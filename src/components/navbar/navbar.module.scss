@@ -1,0 +1,35 @@
+$white-letters: #ffffff;
+$dark-color-fonts: #1b1b1b;
+
+.navbar {
+	display: flex;
+	gap: 50px;
+	font-weight: 100;
+	width: 100%;
+	left: 0px;
+	position: fixed;
+	justify-content: center;
+	color: #ffffff;
+	z-index: 1;
+	height: 9%;
+	align-items: center;
+}
+
+.selected {
+	color: $white-letters;
+	font-weight: 700;
+	text-decoration: underline;
+	text-underline-position: under;
+}
+
+.selected:hover {
+	color: $white-letters;
+}
+.unselected {
+	font-family: noto serif;
+	color: $white-letters;
+}
+
+.unselected:hover {
+	color: $white-letters;
+}
