@@ -1,25 +1,22 @@
-import { useState } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import styles from './home.module.scss';
 import OwnButton from '../own-button/own-button';
 import PaintingCarrousel from '../painting-carrousel/painting-carrousel';
-function Home() {
+
+export interface Picture {
+	url: string;
+	main: boolean;
+}
+
+export interface HomeProps {
+	carrouselOptions: any;
+}
+
+function Home({ carrouselOptions }: HomeProps) {
 	const [backgroundPaint, setBackgroundPaint] = useState(
-		'/src/assets/flamingos-painting/flamingos-front-view.jpeg'
+		'https://art-gallery-alfonso-burgos-images.s3.us-west-2.amazonaws.com/boat-painting/boat-main.JPG'
 	);
-	const carrouselOptions = [
-		{
-			url: '/src/assets/flamingos-painting/flamingos-front-view.jpeg',
-			name: 'Flamingos',
-		},
-		{
-			url: '/src/assets/flamingos-2-painting/flamingos-2-main.jpg',
-			name: 'Flamingos 2',
-		},
-		{
-			url: 'https://art-gallery-alfonso-burgos-images.s3.us-west-2.amazonaws.com/boat-painting/boat-main.JPG',
-			name: 'La Costa',
-		},
-	];
+
 	return (
 		<div
 			className={styles.root}
@@ -28,10 +25,12 @@ function Home() {
 			}}
 		>
 			<div className={styles.leftDiv}>
-				<PaintingCarrousel
-					options={carrouselOptions}
-					onOptionClick={setBackgroundPaint}
-				/>
+				{carrouselOptions && (
+					<PaintingCarrousel
+						options={carrouselOptions}
+						onOptionClick={setBackgroundPaint}
+					/>
+				)}
 			</div>
 			<div className={styles.centerDiv}>
 				<div className={styles.mainTitle}>Art Gallery</div>

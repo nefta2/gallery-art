@@ -7,14 +7,12 @@ $light-color: #f2f2f2;
 	font-size: 20px;
 }
 .singleDiv {
-	/* background-color: $light-color;
-	color: $dark-color-fonts; */
 	padding: 10px;
 	display: flex;
 	justify-content: flex-end;
-	width: 180px;
 	padding-right: 20px;
 	cursor: pointer;
+	white-space: nowrap;
 }
 
 .singleDiv:hover {

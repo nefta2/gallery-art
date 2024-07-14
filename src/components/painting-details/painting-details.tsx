@@ -42,28 +42,33 @@ const paintings = [
 		path: 'la-costa',
 	},
 ];
-
-function PaintingDetails() {
+export interface PaintingDetailsProps {
+	paintings: any;
+}
+function PaintingDetails({ paintings }: PaintingDetailsProps) {
 	const { path } = useParams();
-	const painting = paintings.find((p) => p.path === path);
-
-	if (!painting) {
+	console.log(paintings);
+	const paintingData = paintings.find((x: any) => x.painting.path === path);
+	console.log('Painting data', paintingData);
+	if (!paintingData) {
 		return <div>Painting not found</div>;
 	}
 
 	return (
 		<div style={{ margin: '0px 70px', height: '100%' }}>
 			<div className={styles.root}>
-				<PaintingHorizontalCarrousel pictures={painting.url} />
+				<PaintingHorizontalCarrousel
+					pictures={paintingData.pictures.map((picture: any) => picture.url)}
+				/>
 				<div className={styles.rightDiv}>
-					<div className={styles.mainTitle}>{painting.title}</div>
+					<div className={styles.mainTitle}>{paintingData.painting.title}</div>
 					<div className={styles.secondDiv}>
 						<div className={styles.paintDetails}>
 							<div>
-								<div>Height: {painting.height} cm</div>
-								<div>Width: {painting.width} cm</div>
-								<div>Depth: {painting.depth} mm</div>
-								<div>Technique: {painting.technique}</div>
+								<div>Height: {paintingData.painting.height} cm</div>
+								<div>Width: {paintingData.painting.width} cm</div>
+								<div>Depth: {paintingData.painting.depth} mm</div>
+								<div>Technique: {paintingData.painting.technique}</div>
 							</div>
 							<div>
 								<OwnButton
