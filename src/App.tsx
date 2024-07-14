@@ -24,21 +24,6 @@ function App() {
 			} catch (error) {
 				console.error('Error fetching data:', error);
 			}
-			// Example POST request with payload
-
-			fetch('https://3wfcv37ji4.execute-api.us-west-2.amazonaws.com/dev', {
-				method: 'POST',
-				body: JSON.stringify({
-					Actions: ['Test', 'navigated_page', 'submitted_form'],
-				}),
-			})
-				.then((response) => response.json())
-				.then((data) => {
-					console.log('Success:', data);
-				})
-				.catch((error) => {
-					console.error('Error:', error);
-				});
 		};
 
 		fetchData();
