@@ -16,7 +16,7 @@ function Home() {
 			name: 'Flamingos 2',
 		},
 		{
-			url: '/src/assets/boat-painting/boat-main.jpg',
+			url: 'https://art-gallery-alfonso-burgos-images.s3.us-west-2.amazonaws.com/boat-painting/boat-main.JPG',
 			name: 'La Costa',
 		},
 	];
