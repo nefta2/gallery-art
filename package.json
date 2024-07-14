@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.614.0",
+    "@aws-sdk/s3-request-presigner": "^3.614.0",
     "@types/react-router-dom": "^5.3.3",
     "aws-sdk": "^2.1659.0",
     "axios": "^1.7.2",

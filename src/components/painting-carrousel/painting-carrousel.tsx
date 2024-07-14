@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './painting-carrousel.module.scss';
 
 export interface PaintingCarrouselProps {
-	options: { url: string; name: string }[];
+	options: any;
 	onOptionClick: (url: string) => void;
 }
 
@@ -16,7 +16,7 @@ function PaintingCarrousel({ options, onOptionClick }: PaintingCarrouselProps) {
 
 	return (
 		<div className={styles.mainDiv}>
-			{options.map((x, index) => (
+			{options.map((x: any, index: any) => (
 				<div
 					key={index}
 					className={styles.singleDiv}

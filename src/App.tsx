@@ -12,7 +12,7 @@ import axios from 'axios';
 function App() {
 	const location = window.location.pathname;
 	const isHomeActive = location === '/';
-	const [data, setData] = useState(null);
+	const [data, setData] = useState([]);
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -29,7 +29,22 @@ function App() {
 		fetchData();
 	}, []);
 
-	console.log(data);
+	useEffect(() => {
+		console.log('Data:', data);
+	}, [data]);
+
+	const carrouselOptions = data.map((item) => {
+		const mainPicture = item.pictures.find((picture: any) => picture.main);
+		return {
+			url: mainPicture ? mainPicture.url : '',
+			name: item.painting.title,
+		};
+	});
+
+	useEffect(() => {
+		console.log('carrouselOptions:', carrouselOptions);
+	}, [carrouselOptions]);
+
 	return (
 		<>
 			<BrowserRouter>
@@ -39,11 +54,13 @@ function App() {
 					style={{ background: isHomeActive ? '#f2f2f2' : '#f2f2f2' }}
 				>
 					<Routes>
-						<Route path="" element={<Home />} />
+						<Route
+							path="/"
+							element={<Home data={data} carrouselOptions={carrouselOptions} />}
+						/>
 						<Route path="/about-artist" element={<AboutArtist />} />
 						<Route path="/works" element={<Works data={data} />} />
 						<Route path="/works/:path" element={<PaintingDetails />} />
-
 						<Route path="/contact" element={<Contact />} />
 					</Routes>
 				</div>
