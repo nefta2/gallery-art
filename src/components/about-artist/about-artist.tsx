@@ -3,10 +3,11 @@ import OwnButton from '../own-button/own-button';
 
 function AboutArtist() {
 	const workAura = [
-		'/src/assets/about-artist/work-aura-1.jpeg',
-		'/src/assets/about-artist/work-aura-2.jpeg',
-		'/src/assets/about-artist/work-aura-3.jpeg',
+		'https://art-gallery-alfonso-burgos-images.s3.us-west-2.amazonaws.com/work-aura-1.jpeg',
+		'https://art-gallery-alfonso-burgos-images.s3.us-west-2.amazonaws.com/work-aura-2.jpeg',
+		'https://art-gallery-alfonso-burgos-images.s3.us-west-2.amazonaws.com/work-aura-3.jpeg',
 	];
+
 	return (
 		<div style={{ margin: '0px 30px', height: '100%' }}>
 			<div className={styles.root}>
