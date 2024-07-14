@@ -6,7 +6,7 @@ import AboutArtist from './components/about-artist/about-artist';
 import Works from './components/works/works';
 import Contact from './components/contact/contact';
 import PaintingDetails from './components/painting-details/painting-details';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import axios from 'axios';
 
 function App() {
@@ -33,13 +33,18 @@ function App() {
 		console.log('Data:', data);
 	}, [data]);
 
-	const carrouselOptions = data.map((item) => {
-		const mainPicture = item.pictures.find((picture: any) => picture.main);
-		return {
-			url: mainPicture ? mainPicture.url : '',
-			name: item.painting.title,
-		};
-	});
+	const carrouselOptions =
+		useMemo(() => {
+			return data.map((item) => {
+				//@ts-expect-error
+				const mainPicture = item.pictures.find((picture: any) => picture.main);
+				return {
+					url: mainPicture ? mainPicture.url : '',
+					//@ts-expect-error
+					name: item.painting.title,
+				};
+			});
+		}, [data]) || null;
 
 	useEffect(() => {
 		console.log('carrouselOptions:', carrouselOptions);
@@ -56,11 +61,14 @@ function App() {
 					<Routes>
 						<Route
 							path="/"
-							element={<Home data={data} carrouselOptions={carrouselOptions} />}
+							element={<Home carrouselOptions={carrouselOptions} />}
 						/>
 						<Route path="/about-artist" element={<AboutArtist />} />
 						<Route path="/works" element={<Works data={data} />} />
-						<Route path="/works/:path" element={<PaintingDetails />} />
+						<Route
+							path="/works/:path"
+							element={<PaintingDetails paintings={data} />}
+						/>
 						<Route path="/contact" element={<Contact />} />
 					</Routes>
 				</div>

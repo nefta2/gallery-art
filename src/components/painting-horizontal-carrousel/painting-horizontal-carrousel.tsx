@@ -1,19 +1,18 @@
 import { useState } from 'react';
 import styles from './painting-horizontal-carrousel.module.scss';
 
-export interface PaintingHorizontalCarrousel {
-	pictures: any;
+export interface PaintingHorizontalCarrouselProps {
+	pictures: string[];
 }
 
 function PaintingHorizontalCarrousel({
 	pictures,
-}: PaintingHorizontalCarrousel) {
+}: PaintingHorizontalCarrouselProps) {
 	const [pictureIndex, setPictureIndex] = useState(0);
-
+	console.log(pictures);
 	const nextPicture = (value: number) => {
 		const newIndex = pictureIndex + value;
 		const picturesLength = pictures.length;
-		console.log(picturesLength);
 		setPictureIndex(() => {
 			if (newIndex < 0) {
 				return picturesLength - 1;

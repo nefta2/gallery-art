@@ -14,7 +14,7 @@ export interface HomeProps {
 
 function Home({ carrouselOptions }: HomeProps) {
 	const [backgroundPaint, setBackgroundPaint] = useState(
-		carrouselOptions[0].url
+		'https://art-gallery-alfonso-burgos-images.s3.us-west-2.amazonaws.com/boat-painting/boat-main.JPG'
 	);
 
 	return (

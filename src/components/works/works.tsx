@@ -29,7 +29,7 @@ function Works({ data }: Works) {
 									colorChosen={'#1B1B1B'}
 									backgroundColorChosen={''}
 									borderChosen={'solid 2px #1B1B1B'}
-									link={`/works/${x.path}`}
+									link={`/works/${x.painting.path}`}
 								/>
 							</div>
 						);
