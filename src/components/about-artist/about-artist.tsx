@@ -1,8 +1,5 @@
 import styles from './about-artist.module.scss';
 import OwnButton from '../own-button/own-button';
-import { useActionContext } from '../../ActionContext';
-import { useEffect } from 'react';
-import axios from 'axios';
 
 function AboutArtist() {
 	const workAura = [
