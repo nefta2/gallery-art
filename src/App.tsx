@@ -29,10 +29,6 @@ function App() {
 		fetchData();
 	}, []);
 
-	useEffect(() => {
-		console.log('Data:', data);
-	}, [data]);
-
 	const carrouselOptions =
 		useMemo(() => {
 			return data.map((item) => {
