@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import styles from './contact.module.scss';
 import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/16/solid';
 
