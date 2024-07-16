@@ -1,7 +1,6 @@
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import Home from './components/home/home';
 import Navbar from './components/navbar/navbar';
-import styles from './App.module.scss';
 import AboutArtist from './components/about-artist/about-artist';
 import Works from './components/works/works';
 import Contact from './components/contact/contact';
