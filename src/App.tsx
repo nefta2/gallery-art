@@ -8,10 +8,9 @@ import Contact from './components/contact/contact';
 import PaintingDetails from './components/painting-details/painting-details';
 import { useState, useEffect, useMemo } from 'react';
 import axios from 'axios';
+import Global from './global';
 
 function App() {
-	const location = window.location.pathname;
-	const isHomeActive = location === '/';
 	const [data, setData] = useState([]);
 
 	useEffect(() => {
@@ -50,10 +49,7 @@ function App() {
 		<>
 			<BrowserRouter>
 				<Navbar />
-				<div
-					className={`${styles['main-page-wrapper']}  ${styles['pageWithSideBar']}`}
-					style={{ background: isHomeActive ? '#f2f2f2' : '#f2f2f2' }}
-				>
+				<Global>
 					<Routes>
 						<Route
 							path="/"
@@ -67,7 +63,7 @@ function App() {
 						/>
 						<Route path="/contact" element={<Contact />} />
 					</Routes>
-				</div>
+				</Global>
 			</BrowserRouter>
 		</>
 	);
